@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EulerMonocle;
+using EulersMonocle;
 
 namespace Tests
 {
@@ -20,7 +21,9 @@ namespace Tests
         {
             Int16 index = 1;
 
+            Crack.Start();
             var solution = Monocle.Instance[index].GetSolution();
+            Crack.Stop();
             Assert.AreEqual(index, solution.ProblemNumber);
         }
     }
