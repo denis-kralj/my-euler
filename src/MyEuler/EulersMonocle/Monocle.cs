@@ -69,7 +69,7 @@ namespace EulerMonocle
         {
             get
             {
-                if(i > this.Problems.Count - 1)
+                if(i > this.Problems.Count)
                 {
                     var message = String.Format("Index out of range, item count is {0}", this.Problems.Count);
                     throw new Exception(message);
@@ -80,7 +80,7 @@ namespace EulerMonocle
                     throw new Exception(message);
                 }
 
-                return Problems[i];
+                return Problems[i-1];
             }
         }
     }

@@ -8,6 +8,6 @@ namespace EulerMonocle
 {
     public interface IProblem
     {
-        Solution GetSolution(Int32 problemNumber);
+        Solution GetSolution();
     }
 }
