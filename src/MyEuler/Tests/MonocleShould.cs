@@ -14,5 +14,14 @@ namespace Tests
             var solution = Monocle.Instance[1].GetSolution();
             Assert.AreEqual(solution.Result, "233168");
         }
+
+        [TestMethod]
+        public void HaveSameProblemNumberAsProblemIndex()
+        {
+            Int16 index = 1;
+
+            var solution = Monocle.Instance[index].GetSolution();
+            Assert.AreEqual(index, solution.ProblemNumber);
+        }
     }
 }
