@@ -4,9 +4,9 @@ namespace EulerMonocle
 {
     public class Solution
     {
-        private Int32 problemNumber;
+        private Int16 problemNumber;
 
-        public int ProblemNumber
+        public Int16 ProblemNumber
         {
             get { return problemNumber; }
             set { problemNumber = value; }

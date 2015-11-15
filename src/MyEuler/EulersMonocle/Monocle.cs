@@ -41,13 +41,17 @@ namespace EulerMonocle
         private void PopulateSolved()
         {
             this.Problems = new List<IProblem>();
+            List <IProblem> tmpHolder = new List<IProblem>();
+
             foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
             {
                 if (type.GetInterfaces().Contains(typeof(IProblem)) && type.IsInterface == false)
                 {
-                    this.Problems.Add((IProblem)Activator.CreateInstance(type));
+                    tmpHolder.Add((IProblem)Activator.CreateInstance(type));
                 }
             }
+
+            this.Problems = tmpHolder.OrderBy(p => (Int32)p.GetProblemNumber()).ToList();
 
         }
 
@@ -65,7 +69,7 @@ namespace EulerMonocle
         /// </summary>
         /// <param name="i">the desired problems number</param>
         /// <returns></returns>
-        public IProblem this[int i]
+        public IProblem this[Int16 i]
         {
             get
             {

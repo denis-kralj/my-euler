@@ -9,5 +9,6 @@ namespace EulerMonocle
     public interface IProblem
     {
         Solution GetSolution();
+        Int16 GetProblemNumber();
     }
 }
