@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EulerMonocle;
-using EulersMonocle;
+using Utility;
 
 namespace Tests
 {

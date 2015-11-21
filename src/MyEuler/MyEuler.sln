@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerMonocle", "EulersMonoc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{ABA27C33-D1EB-4AC8-89CE-EC1868F3102A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{4253266F-F46C-4BE9-AC9C-6211E6A802A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ABA27C33-D1EB-4AC8-89CE-EC1868F3102A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABA27C33-D1EB-4AC8-89CE-EC1868F3102A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABA27C33-D1EB-4AC8-89CE-EC1868F3102A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4253266F-F46C-4BE9-AC9C-6211E6A802A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4253266F-F46C-4BE9-AC9C-6211E6A802A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4253266F-F46C-4BE9-AC9C-6211E6A802A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4253266F-F46C-4BE9-AC9C-6211E6A802A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
