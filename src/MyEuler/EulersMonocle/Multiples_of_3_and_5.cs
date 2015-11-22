@@ -23,7 +23,7 @@ namespace EulersMonocle
             return result;
         }
 
-        private string GetResult()
+        private String GetResult()
         {
             var sum = 0;
             var start = 0;
@@ -39,7 +39,7 @@ namespace EulersMonocle
             return sum.ToString();
         }
 
-        private string GetProblemText()
+        private String GetProblemText()
         {
             return 
                 "If we list all the natural numbers below 10 that "+
@@ -48,7 +48,7 @@ namespace EulersMonocle
                 "the multiples of 3 or 5 below 1000.";
         }
 
-        public short GetProblemNumber()
+        public Int16 GetProblemNumber()
         {
             return PROBLEM_NUMBER;
         }
