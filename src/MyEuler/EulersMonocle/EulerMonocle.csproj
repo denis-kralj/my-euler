@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Even_Fibonacci_numbers.cs" />
     <Compile Include="IProblem.cs" />
     <Compile Include="Monocle.cs" />
     <Compile Include="Multiples_of_3_and_5.cs" />
