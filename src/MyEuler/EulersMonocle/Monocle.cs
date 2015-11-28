@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -11,7 +12,7 @@ namespace EulerMonocle
     /// Main class ment to hold project euler problem 
     /// objects that impement the IProblem interface.
     /// </summary>
-    public class Monocle
+    public class Monocle : ICollection<IProblem>
     {
         private static Monocle instance;
 
@@ -55,6 +56,45 @@ namespace EulerMonocle
 
         }
 
+        public void Add(IProblem item)
+        {
+            this.Problems.Add(item);
+        }
+
+        public void Clear()
+        {
+            this.Problems.Clear();
+        }
+
+        public bool Contains(IProblem item)
+        {
+            return this.Problems.Contains(item);
+        }
+
+        public void CopyTo(IProblem[] array, int arrayIndex)
+        {
+            foreach (var item in this.Problems)
+            {
+                array[arrayIndex++] = item;
+            }
+        }
+
+        public bool Remove(IProblem item)
+        {
+            return this.Problems.Remove(item);
+        }
+
+        public IEnumerator<IProblem> GetEnumerator()
+        {
+            return this.Problems.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            // i dont even understand this :\
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Holder of solved problems
         /// </summary>
@@ -62,6 +102,22 @@ namespace EulerMonocle
         {
             get;
             set;
+        }
+
+        public int Count
+        {
+            get
+            {
+                return this.Problems.Count;
+            }
+        }
+
+        public bool IsReadOnly
+        {
+            get
+            {
+                return true;
+            }
         }
 
         /// <summary>
