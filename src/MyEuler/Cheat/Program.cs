@@ -17,6 +17,7 @@ namespace Cheat
             {
                 Console.WriteLine("Problem {0}: {1}", problem.GetProblemNumber(), problem.GetSolution().Result);
             }
+
             Console.ReadLine();
         }
     }
