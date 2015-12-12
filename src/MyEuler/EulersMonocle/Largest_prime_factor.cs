@@ -42,7 +42,7 @@ namespace EulersMonocle
             var primes = new List<Int32>();
 
             foreach (var item in numbers)
-                if(primes.Count == 0 || !primes.Any(n => item % n == 0 ))
+                if(primes.Count == 0 || !primes.Any(n => !(n > item/2) && item % n == 0 ))
                     primes.Add(item);
 
             foreach (var item in primes.OrderByDescending(k => k))
