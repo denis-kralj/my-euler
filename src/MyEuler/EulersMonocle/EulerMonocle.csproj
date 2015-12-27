@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="10001st_prime.cs" />
     <Compile Include="Even_Fibonacci_numbers.cs" />
     <Compile Include="IProblem.cs" />
     <Compile Include="Largest_palindrome_product.cs" />
