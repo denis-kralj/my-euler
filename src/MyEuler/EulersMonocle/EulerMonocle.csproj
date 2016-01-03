@@ -45,6 +45,7 @@
     <Compile Include="IProblem.cs" />
     <Compile Include="Largest_palindrome_product.cs" />
     <Compile Include="Largest_prime_factor.cs" />
+    <Compile Include="Largest_product_in_a_series.cs" />
     <Compile Include="Monocle.cs" />
     <Compile Include="Multiples_of_3_and_5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
