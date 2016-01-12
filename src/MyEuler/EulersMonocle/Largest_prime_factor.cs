@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using Utility;
 
 namespace EulersMonocle
 {
@@ -37,15 +38,12 @@ namespace EulersMonocle
             var num = 600851475143;
             var result = String.Empty;
 
-            var primeLimit = (Int32)Math.Sqrt(num);
-            var numbers = Enumerable.Range(2, primeLimit);
-            var primes = new List<Int32>();
-
-            foreach (var item in numbers)
-                if(primes.Count == 0 || !primes.Any(n => !(n > item/2) && item % n == 0 ))
-                    primes.Add(item);
-
-            foreach (var item in primes.OrderByDescending(k => k))
+            while (Primer.Primes.Last() < (Int32)Math.Sqrt(num))
+            {
+                Primer.GeneratePrimes(5000);
+            }
+           
+            foreach (var item in Primer.Primes.OrderByDescending(k => k))
                 if (num % item == 0) { result = item.ToString(); break; }
            
             return result;

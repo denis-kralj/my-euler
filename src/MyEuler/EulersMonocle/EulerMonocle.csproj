@@ -54,6 +54,12 @@
     <Compile Include="Special_Pythagorean_triplet.cs" />
     <Compile Include="Sum_square_difference.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{4253266f-f46c-4be9-ac9c-6211e6a802a1}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
