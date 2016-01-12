@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Smallest_multiple.cs" />
     <Compile Include="Solution.cs" />
+    <Compile Include="Special_Pythagorean_triplet.cs" />
     <Compile Include="Sum_square_difference.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
