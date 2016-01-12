@@ -105,6 +105,7 @@ namespace Utility
 
         public static void Start()
         {
+            _timer.Reset();
             _timer.Start();
 
             var message = "Started performance log in method Start()";
