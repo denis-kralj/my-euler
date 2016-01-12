@@ -34,7 +34,7 @@ namespace EulersMonocle
         {
             Int32 a = 3, b = 4, c = 5, target = 1000;
             
-            while(ArentPythagoreanTrilpet(a, b, c) && !(a + b + c == target))
+            while(!(ArePythagoreanTrilpet(a, b, c) && (a + b + c == target)))
             {
                 c++;
 
@@ -55,9 +55,9 @@ namespace EulersMonocle
             return (a * b * c).ToString();
         }
 
-        private bool ArentPythagoreanTrilpet(int a, int b, int c)
+        private bool ArePythagoreanTrilpet(int a, int b, int c)
         {
-            return !(a * a + b * b == c * c);
+            return a * a + b * b == c * c;
         }
 
         private string GetProblemText()
