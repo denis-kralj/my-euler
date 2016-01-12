@@ -15,7 +15,7 @@ namespace Tests
             var path = @"d:\";
             var filename = "data.log";
             Crack.WriteMode = WriteModeEnum.File;
-            Crack.SetLogLocation(path);
+            Crack.SetLogPath(path);
 
             Assert.IsTrue(File.Exists(Path.Combine(path, filename)));
         }
@@ -26,7 +26,7 @@ namespace Tests
             var path = @"d:\";
             var filename = "data.log";
             Crack.WriteMode = WriteModeEnum.File;
-            Crack.SetLogLocation(path);
+            Crack.SetLogPath(path);
             var toCheck = new FileInfo(Path.Combine(path, filename));
 
             Assert.IsTrue(toCheck.Length == 0);

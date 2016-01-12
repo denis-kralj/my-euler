@@ -58,7 +58,20 @@ namespace Utility
             }
         }
 
-        public static void LogEvent(string message)
+        public static string LogPath
+        {
+            get
+            {
+                return _logPath;
+            }
+
+            set
+            {
+                _logPath = value;
+            }
+        }
+
+        private static void LogEvent(string message)
         {
             switch (Crack.WriteMode)
             {
@@ -67,7 +80,7 @@ namespace Utility
                     break;
                 case WriteModeEnum.File:
                     Crack._logList.Add(new CrackLog(message));
-                    File.AppendAllLines(Crack._logPath, Crack.Log);
+                    File.AppendAllLines(Crack.LogPath, Crack.Log);
                     break;
                 case WriteModeEnum.WindowsLog:
                     using (EventLog eventLog = new EventLog("Crack"))
@@ -82,7 +95,7 @@ namespace Utility
 
         }
 
-        public static void SetLogLocation(String path)
+        public static void SetLogPath(String path)
         {
             FileAttributes attr = File.GetAttributes(path);
 
@@ -91,16 +104,16 @@ namespace Utility
                 if (!Directory.Exists(path))
                     Directory.CreateDirectory(path);
 
-                Crack._logPath = Path.Combine(path, Crack._defaultLogFileName);
+                Crack.LogPath = Path.Combine(path, Crack._defaultLogFileName);
             }
             else
             {
                 if (File.Exists(path))
                     File.Delete(path);
 
-                Crack._logPath = path;
+                Crack.LogPath = path;
             }
-            File.Create(Crack._logPath).Dispose();
+            File.Create(Crack.LogPath).Dispose();
         }
 
         public static void Start()
