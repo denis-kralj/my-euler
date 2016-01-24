@@ -34,32 +34,37 @@ namespace Utility
         {
             var seed = 2;
             var counter = 0;
+            var newPrimes = new List<Int32>();
 
             if (Primes.Count != 0)
-                seed = Primes.Last() + 1;
-
-            var primes = new List<Int32>();
-
-            while (primes.Count < count)
+                seed = Primes.Last() + 2;
+            else
             {
-                var numbers = Enumerable.Range(seed, seed + count);
+                Primer.Primes.Add(seed);
+                newPrimes.Add(seed++);
+            }
+            
+
+            while (newPrimes.Count < count)
+            {
+                var numbers = Enumerable.Range(seed, seed + count*2)
+                    .Where(n => n%2 != 0);
 
                 foreach (var item in numbers)
                 {
-                    if (Primes.Count == 0 || !Primes.Any(n => !(n > item / 2) && item % n == 0))
+                    if (!Primes.Any(n => !(n > item / 2) && item % n == 0))
                     {
-                        primes.Add(item);
+                        newPrimes.Add(item);
+                        Primer.Primes.Add(item);
                         counter++;
-                        seed = item;
+                        seed = item + 2;
                     }
                 }
             }
 
-            Primes.AddRange(primes);
-
             File.AppendAllLines(
                             FilePath,
-                            primes.Select(i => i.ToString())
+                            newPrimes.Select(i => i.ToString())
                             );
         }
         

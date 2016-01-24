@@ -38,6 +38,9 @@ namespace EulersMonocle
             var num = 600851475143;
             var result = String.Empty;
 
+            if (Primer.Primes.Count == 0)
+                Primer.GeneratePrimes(5000);
+
             while (Primer.Primes.Last() < (Int32)Math.Sqrt(num))
             {
                 Primer.GeneratePrimes(5000);
