@@ -52,6 +52,7 @@
     <Compile Include="Smallest_multiple.cs" />
     <Compile Include="Solution.cs" />
     <Compile Include="Special_Pythagorean_triplet.cs" />
+    <Compile Include="Summation_of_primes.cs" />
     <Compile Include="Sum_square_difference.cs" />
   </ItemGroup>
   <ItemGroup>
